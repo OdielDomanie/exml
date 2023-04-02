@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"
+    xmlns:yt="http://youtube.com/yt/2012/10/10"
+    xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd" minBufferTime="PT1.500S"
+    profiles="urn:mpeg:dash:profile:isoff-main:2011" type="dynamic"
+    availabilityStartTime="2023-03-01T13:00:20" timeShiftBufferDepth="PT7200.000S"
+    minimumUpdatePeriod="PT1.000S" yt:earliestMediaSequence="0"
+    yt:mpdRequestTime="2023-03-01T14:50:39.879" yt:mpdResponseTime="2023-03-01T14:50:39.890">
+    <Period start="PT6616.022S" yt:segmentIngestTime="2023-03-01T14:50:34.015">
+        <SegmentList presentationTimeOffset="6616022" startNumber="6616" timescale="1000">
+            <SegmentTimeline>
+                <S d="1000" />
+                <S d="1000" />
+                <S d="1000" />
+            </SegmentTimeline>
+        </SegmentList>
+        <AdaptationSet id="0" mimeType="audio/mp4" subsegmentAlignment="true">
+            <Role schemeIdUri="urn:mpeg:DASH:role:2011" value="main" />
+            <Representation id="139" codecs="mp4a.40.5" audioSamplingRate="22050" startWithSAP="1"
+                bandwidth="64000">
+                <AudioChannelConfiguration
+                    schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/139/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/audio%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRAIgbCHiXENJiN_azZ9jkYbZvBuDVFJfp9M0oyphZRJIczICIHtsUxQ6N5UtEcL7DyjXeU0ELj7oc4qeHIhPaQJ0-J2s/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRQIhAIYOfPg2Ojz7vGWJ9K3LHTnJuF4s-IlWwYC_z1Zc_zFrAiAJsmaBK8KjvlYQJoWbot0sTYVIY9AgNT7VdfJI7N6XKw%3D%3D/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777939" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777951" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777963" />
+                </SegmentList>
+            </Representation>
+            <Representation id="140" codecs="mp4a.40.2" audioSamplingRate="44100" startWithSAP="1"
+                bandwidth="144000">
+                <AudioChannelConfiguration
+                    schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/140/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/audio%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRgIhAPde00bA68WGpZkfVUZNuN7rIkuZFQuSb1N0NANqQUN0AiEAiPEyGjk_x_F3yCVvq5cFGYq-RWItmQpxM-JamQlqr3c%3D/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRQIhAJ7qjE3o0VrVbfywjosxsxpCpKNv9f5l8uyvuv4aRZ7hAiBDFJcnnqCn-rp1yV9Nl-XcccudcjziH7qxOyUdCNaMyw%3D%3D/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777930" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777942" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777953" />
+                </SegmentList>
+            </Representation>
+        </AdaptationSet>
+        <AdaptationSet id="1" mimeType="video/mp4" subsegmentAlignment="true">
+            <Role schemeIdUri="urn:mpeg:DASH:role:2011" value="main" />
+            <Representation id="133" codecs="avc1.4d4015" width="426" height="240" startWithSAP="1"
+                maxPlayoutRate="1" bandwidth="419256" frameRate="30">
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/133/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/video%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRQIgV8gYVz1YtQGsqKKAfERtuk3w-pQsNH_u1ZJwsE8xiFMCIQDbwjKCRfQHUYgm5H7touV9ZNi_77l-cbN7NKz9Ck46Jg%3D%3D/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRAIgO77JiA3xRpfVFGji-TGJGsTjCK4iw-L2eJRvzsiA_SUCIFX4CEHJ6xa0BgFVvBTAGACbD4dbAGnzUQF7jN23RbKi/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777934" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777945" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777952" />
+                </SegmentList>
+            </Representation>
+            <Representation id="134" codecs="avc1.4d401e" width="640" height="360" startWithSAP="1"
+                maxPlayoutRate="1" bandwidth="772630" frameRate="30">
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/134/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/video%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRgIhAOFQlbIZwUTUewmlyHVxKJ7bnPYLhcviHxK9JzNFwIhcAiEA6Ksn2Gz4bNpJdcLOIEdm3I5SYaEWsU0kqywgYUs9hN0%3D/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRAIgLAOEVgnB4Hp9x_k4cvjOlfo3cCsnxkZR3hfueR7Y1YICIDwyh76LdjbZo19DJUI9X1nHCTgOJxwkOzGqVVfNIDtf/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777933" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777946" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777954" />
+                </SegmentList>
+            </Representation>
+            <Representation id="135" codecs="avc1.4d401f" width="854" height="480" startWithSAP="1"
+                maxPlayoutRate="1" bandwidth="1077445" frameRate="30">
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/135/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/video%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRQIgOMBBx7ixRwv4CknUpqqOZxKYzrwEZYbBwDmUUNzzaocCIQDOiyJC51h6GXSRIYhDw_gdCjScqdEaWvQ4KULuIkf9jg%3D%3D/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRgIhAKFjuM-lQJatno7hq2d4PfZNx_FQ1XbpbBjq2evyKxWzAiEA2TxLuGnHyh8ahRdthqGFeKdNT4mMr-_O6Yxa0jMr_vY%3D/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777935" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777947" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777957" />
+                </SegmentList>
+            </Representation>
+            <Representation id="160" codecs="avc1.4d400c" width="256" height="144" startWithSAP="1"
+                maxPlayoutRate="1" bandwidth="192223" frameRate="30">
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/160/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/video%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRgIhAIV9fUgQdZUk-iTSewdkZxYCHrcZ4fBXEYpUIxILRyj6AiEA8E0AcCbqOznsqLjlwzgRnEwSU3UjkNZowOI66IkNDQo%3D/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRQIhAPNfJ-DpEM4CPq7E1NVMT0iJ8PRGo9hU0Crq1siET9GkAiBkpByzJCPKXOxMu3k9_uGq6l6mrYIfQOwjQvJiXGGlMw%3D%3D/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777937" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777948" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777962" />
+                </SegmentList>
+            </Representation>
+            <Representation id="298" codecs="avc1.4d4020" width="1280" height="720" startWithSAP="1"
+                maxPlayoutRate="1" bandwidth="2639005" frameRate="60">
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/298/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/video%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRQIhAIBKASnJ2n4LJHU4zBVnaXiPKiHoZUMGweY2k1fPfdsMAiBQOlfBJRDAUVnbGqXeclznR_4E0CNPenU0FSBIn1gr4g%3D%3D/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRAIgAOFHRxiitU3OkNzlysGobhtGhmhSiP4349zjX2KFb_wCIA18xwmBuc8EtKk6wT8DwQm3uPhjH-fBFwHctMXIOB6p/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777928" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777940" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777958" />
+                </SegmentList>
+            </Representation>
+            <Representation id="299" codecs="avc1.4d402a" width="1920" height="1080"
+                startWithSAP="1" maxPlayoutRate="1" bandwidth="5144200" frameRate="60">
+                <BaseURL>
+                    https://rr6---sn-u0g3jxaa-n5fl.googlevideo.com/videoplayback/expire/1677703787/ei/C2b_Y-K8IML71gKUhb_oAQ/ip/85.153.206.137/id/ZFxguGRzFHk.1/itag/299/source/yt_live_broadcast/requiressl/yes/spc/H3gIhlRafGPdMGxI3MMOKOhvCyJGsBM/vprv/1/playlist_type/LIVE/ratebypass/yes/mime/video%2Fmp4/live/1/gir/yes/noclen/1/dur/1.000/keepalive/yes/fexp/24007246/sparams/expire,ei,ip,id,itag,source,requiressl,spc,vprv,playlist_type,ratebypass,mime,live,gir,noclen,dur/sig/AOq0QJ8wRQIgb4Sn9q5GaLicII4Nb5VGxd1_9ffykRj1DFUd2Yaj55wCIQCBwGKrL0MKTtggcLR-NCNeNJvyTD_I9kwcsOckOvisgg%3D%3D/initcwndbps/975000/mh/SU/mm/44/mn/sn-u0g3jxaa-n5fl/ms/lva/mt/1677681899/mv/m/mvi/6/pcm2cms/yes/pl/21/lsparams/initcwndbps,mh,mm,mn,ms,mv,mvi,pcm2cms,pl/lsig/AG3C_xAwRQIhAL4EJUTMdWcahxx--BF0l4ywOnp8qSjDd1fldumB7qKQAiAeYFT6FVq3cv8FnIRJNNG49uj6EnLuV7FSHg8qB-pVwA%3D%3D/</BaseURL>
+                <SegmentList>
+                    <SegmentURL media="sq/6616/lmt/1677677594777929" />
+                    <SegmentURL media="sq/6617/lmt/1677677594777941" />
+                    <SegmentURL media="sq/6618/lmt/1677677594777960" />
+                </SegmentList>
+            </Representation>
+        </AdaptationSet>
+    </Period>
+</MPD>
