@@ -1,18 +1,20 @@
 defmodule Exml do
-  import NimbleParsec
+  @moduledoc """
+  Module that contains XML string parsing and navigating functions.
+  """
+  alias Exml.Parsec
 
-  @type xml_node() :: %{
-          name: binary() | :root,
-          attrs: %{binary() => binary()},
-          children: [xml_node()]
-        }
+  @enforce_keys [:name, :attrs, :children]
+  defstruct name: nil, attrs: [], children: []
 
-  @spec parse!(binary()) :: xml_node()
+  @type t() :: Parsec.xml_node()
+
+  @spec parse!(binary()) :: t()
   @doc """
   Parses an XML string.
   """
   def parse!(xml) do
-    {:ok, res, "", _, _, _} = nodes(xml)
+    {:ok, res, "", _, _, _} = Parsec.nodes_to_eos(xml)
 
     %{
       name: :root,
@@ -21,81 +23,30 @@ defmodule Exml do
     }
   end
 
+  @spec parse(binary()) :: {:ok, t()} | {:error, String.t()}
   @doc """
-  XML parser/combinator created by the NimbleParsec library.
+  Parses an XML string.
   """
-  defparsec(:nodes, repeat(parsec(:node)), export_combinator: true)
-
-  identifier = ascii_string([?0..?9, ?a..?z, ?A..?Z], min: 1)
-  w_space = ascii_string([32, ?\n], min: 1)
-
-  closing_tag =
-    ignore(string("</")) |> unwrap_and_tag(identifier, :closing_name) |> ignore(string(">"))
-
-  attr =
-    ignore(w_space)
-    |> tag(identifier, :attr_key)
-    |> ignore(string("="))
-    |> ignore(string("\""))
-    |> tag(
-      # all unicode except double-quote
-      repeat(utf8_string([32..33, 35..0x10FFFF], min: 1)),
-      :attr_val
-    )
-    |> ignore(string("\""))
-
-  attrs =
-    post_traverse(
-      repeat(attr),
-      :attr_map
-    )
-
-  defp attr_map(rest, attrs, ctx, _, _) do
-    attrs_map =
-      attrs
-      |> Enum.reverse()
-      |> Enum.chunk_every(2)
-      |> Enum.into(
-        %{},
-        fn [attr_key: [k], attr_val: [v]] ->
-          {k, v}
-        end
-      )
-
-    {rest, [attrs_map], ctx}
+  def parse(xml) do
+    with {:ok, res, "", _, _, _} <- Parsec.nodes_to_eos(xml) do
+      {:ok,
+       %{
+         name: :root,
+         attrs: %{},
+         children: res
+       }}
+    end
   end
 
-  opening_tag =
-    ignore(string("<"))
-    |> unwrap_and_tag(identifier, :name)
-    |> unwrap_and_tag(attrs, :attrs)
-    |> ignore(string(">"))
+  @spec first(t(), binary()) :: t() | nil
+  @doc """
+  Return the first occurence of the node with the given name.
+  """
+  def first(node, name), do: node.children |> Enum.find(fn n -> n.name == name end)
 
-  text = ascii_string([not: ?<], min: 1)
-
-  defcombinatorp(
-    :node,
-    opening_tag
-    |> parsec(:children)
-    |> concat(closing_tag)
-    |> post_traverse(:into_map)
-    |> post_traverse(:match_tags)
-  )
-
-  defcombinatorp(
-    :children,
-    repeat(choice([parsec(:node), text]))
-    |> tag(:children)
-  )
-
-  defp into_map(rest, kw, ctx, _line, _offset), do: {rest, [Map.new(kw)], ctx}
-
-  defp match_tags(rest, [%{name: name, closing_name: name} = tags], ctx, _line, _offset) do
-    {rest, [Map.delete(tags, :closing_name)], ctx}
-  end
-
-  defp match_tags(_rest, [%{name: name, closing_name: closing_name}], _ctx, _line, _offset)
-       when name != closing_name do
-    {:error, "closing tag #{inspect(closing_name)} did not match opening tag #{inspect(name)}"}
-  end
+  @spec all(t(), binary()) :: list(t())
+  @doc """
+  Return all the children of the node with the given name.
+  """
+  def all(node, name), do: node.children |> Enum.filter(fn n -> n.name == name end)
 end
