@@ -1,5 +1,7 @@
 # Exml
 
+[![ExUnit](https://github.com/OdielDomanie/exml/actions/workflows/elixir.yml/badge.svg)](https://github.com/OdielDomanie/exml/actions/workflows/elixir.yml)
+
 A minimal XML parser library for Elixir, built with NimbleParsec.
 
 The parse result is returned as a transparent Elixir struct.
