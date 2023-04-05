@@ -99,6 +99,7 @@ defmodule Exml.Parsec do
     |> unwrap_and_tag(attrs, :attrs)
     |> optional(ignore(w_space))
     |> ignore(string("/>"))
+    |> tag(empty(), :children)
     |> post_traverse(:into_map)
 
   @doc """
